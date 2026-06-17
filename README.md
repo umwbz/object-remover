@@ -97,6 +97,25 @@ curl -X POST \
   -F "mask=@mask.png"
 ```
 
+---
+
+## ☁️ HuggingFace API Usage (Production)
+
+### 📤 Example Request
+
+import requests
+
+url = "https://umscorleonis-object-remover-space.hf.space/inpaint"
+
+files = {
+    "image": open("image.png", "rb"),
+    "mask": open("mask.png", "rb")
+}
+
+response = requests.post(url, files=files)
+print(response.json())
+
+---
 #### Example Response
 
 ```json
